@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Skills</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Dev Skill</title>
 </head>
 <body>
-    <h1>Skills</h1>
+    <h1>Dev Skill</h1>
+    <a href="/skills">Skills List</a>
     <ul>
       <% skills.forEach(function(skill) { %>
         <li>
-          <%= skill.skill %>
+          <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
             - 
           <!--%= skill.proficiency ? 'done' : 'not done' %> -->
         </li>
