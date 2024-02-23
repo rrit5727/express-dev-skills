@@ -13,6 +13,10 @@ const skills = [
     return skills;
   }
   
-  function getOne() {
-    
+  function getOne(id) {
+    id = parseInt(id);
+    return skills.find(function(skill) {
+      return skill.id === id
+    });
+
   }
