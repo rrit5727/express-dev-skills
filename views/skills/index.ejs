@@ -10,13 +10,19 @@
   <a href="/skills">Skills List</a>
     <h1>Dev Skill</h1>
     <ul>
+      
       <% skills.forEach(function(skill) { %>
         <li>
+          <form action="/skills/<%= skill.id  %>?method=DELETE"
+            class="delete-form" method="POST">
+            <button type="submit">X</button>
+          </form>
           <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
             - 
           <!--%= skill.proficiency ? 'done' : 'not done' %> -->
         </li>
       <% }); %>
     </ul>
+    <a href="/skills/new">Add skill</a>
   </body>
 </html>
